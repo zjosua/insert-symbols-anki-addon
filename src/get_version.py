@@ -39,7 +39,7 @@ def _parse_anki_version_old():
     """
     try:
         version = anki.version
-        v = tuple(map(int, re.match("(\d+)\.(\d+)\.(\d+)", version).groups()))
+        v = tuple(map(int, re.match(r"(\d+)\.(\d+)\.(\d+)", version).groups()))
 
         if v[0] < 2:
             return ANKI_VER_PRE_2_1_0
